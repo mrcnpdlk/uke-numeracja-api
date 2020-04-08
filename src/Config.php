@@ -11,7 +11,7 @@ use Mrcnpdlk\Lib\ConfigurationOptionsAbstract;
 
 class Config extends ConfigurationOptionsAbstract
 {
-    protected $endpoint = 'https://numeracja.uke.gov.pl/pl';
+    protected $endpoint = 'https://numeracja.uke.gov.pl/pl/pstn_tables.json';
 
     /**
      * @return string
