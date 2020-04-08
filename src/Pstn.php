@@ -7,7 +7,7 @@
 
 namespace Mrcnpdlk\Api\UKE\Numeracja;
 
-class Api
+class Pstn
 {
     /**
      * @var \Mrcnpdlk\Api\UKE\Numeracja\Config
@@ -17,5 +17,9 @@ class Api
     public function __construct(Config $oConfig = null)
     {
         $this->oConfig = $oConfig ?? new Config();
+    }
+
+    public function searchByScope(string $scope)
+    {
     }
 }

@@ -11,4 +11,25 @@ use Mrcnpdlk\Lib\ConfigurationOptionsAbstract;
 
 class Config extends ConfigurationOptionsAbstract
 {
+    protected $endpoint = 'https://numeracja.uke.gov.pl/pl';
+
+    /**
+     * @return string
+     */
+    public function getEndpoint(): string
+    {
+        return $this->endpoint;
+    }
+
+    /**
+     * @param string $endpoint
+     *
+     * @return Config
+     */
+    public function setEndpoint(string $endpoint): Config
+    {
+        $this->endpoint = rtrim($endpoint, '/');
+
+        return $this;
+    }
 }

@@ -3,6 +3,8 @@
 composer.phar
 devel
 vendor
+clover.xml
+.phpunit.result.cache
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Windows template
