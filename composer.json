@@ -1,0 +1,66 @@
+{
+  "name": "mrcnpdlk/uke-numeracja-api",
+  "license": "MIT",
+  "homepage": "https://github.com/mrcnpdlk/uke-numeracja-api",
+  "authors": [
+    {
+      "name": "Marcin Pudełek",
+      "email": "marcin@pudelek.org.pl",
+      "role": "Developer"
+    }
+  ],
+  "description": "UKE Numeracja API",
+  "type": "library",
+  "time": "2020-04-08",
+  "keywords": [
+    "api",
+    "uke",
+    "numeracja"
+  ],
+  "config": {
+    "optimize-autoloader": true
+  },
+  "require": {
+    "php": ">=7.2",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "mrcnpdlk/lib-configuration": "^0",
+    "mrcnpdlk/lib-exception": "^0",
+    "myclabs/php-enum": "^1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8",
+    "phpunit/php-code-coverage": "^7",
+    "friendsofphp/php-cs-fixer": "^2",
+    "phpstan/phpstan": "^0",
+    "phpstan/phpstan-phpunit": "^0",
+    "jangregor/phpstan-prophecy": "^0",
+    "monolog/monolog": "^1"
+  },
+  "suggest": {
+    "monolog/monolog": "Allows more advanced logging of the application flow"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Mrcnpdlk\\Api\\UKE\\Numeracja\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\Mrcnpdlk\\Api\\UKE\\Numeracja\\": "tests/suits/"
+    }
+  },
+  "scripts": {
+    "test": [
+      "@phpstan",
+      "@lint",
+      "@phpunit"
+    ],
+    "phpunit": "phpunit --configuration phpunit.xml --coverage-text --colors=never",
+    "phpstan": "phpstan analyse",
+    "fixer": "php-cs-fixer fix --diff --show-progress=dots",
+    "lint": "php-cs-fixer fix --diff --dry-run"
+  }
+}
